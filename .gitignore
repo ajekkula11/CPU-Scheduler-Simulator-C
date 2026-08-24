@@ -1,0 +1,19 @@
+# Build artifacts
+*.o
+*.d
+scheduler
+
+# Generated output (charts are committed, CSVs are not)
+output/*
+!output/.gitkeep
+!output/*.png
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
