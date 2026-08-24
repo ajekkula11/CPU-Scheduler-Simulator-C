@@ -255,7 +255,7 @@ Note: SJF WT ≤ FCFS WT (optimal for all-arrival-at-0 case)  structural check p
 
 Because every process arrives at t=0, SRTF produces the identical schedule to SJF-NP (no later arrival can preempt).
 
-Timeline & metrics identical to SJF-NP above. Context switches \= 0 (no preemption actually occurs).
+Timeline & metrics identical to SJF-NP above. Context switches \= 4 
 
 ### **Priority Non-Preemptive**
 
