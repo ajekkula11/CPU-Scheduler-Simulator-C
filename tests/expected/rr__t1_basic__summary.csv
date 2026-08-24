@@ -1,0 +1,2 @@
+algo,trace,quantum,n_processes,total_ticks,busy_ticks,idle_ticks,avg_turnaround,avg_waiting,avg_response,throughput,cpu_utilisation,context_switches,max_waiting,stddev_waiting
+rr,t1_basic,4,5,23,23,0,15.800000,11.200000,6.800000,0.217391,1.000000,6,15,3.969887

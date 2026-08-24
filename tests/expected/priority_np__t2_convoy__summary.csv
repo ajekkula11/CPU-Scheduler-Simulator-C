@@ -1,0 +1,2 @@
+algo,trace,quantum,n_processes,total_ticks,busy_ticks,idle_ticks,avg_turnaround,avg_waiting,avg_response,throughput,cpu_utilisation,context_switches,max_waiting,stddev_waiting
+priority_np,t2_convoy,0,6,24,24,0,16.500000,12.500000,12.500000,0.250000,1.000000,5,20,6.500000

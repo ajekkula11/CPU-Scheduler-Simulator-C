@@ -1,0 +1,15 @@
+# t3_starvation.txt - 12 processes
+# Purpose: Steady stream of short jobs + one long job. Exposes SJF/SRTF starvation.
+# Format: pid arrival burst priority nice queue
+1 0 20 5 0 2
+2 1 2 1 0 0
+3 2 2 1 0 0
+4 4 3 2 0 0
+5 5 2 1 0 0
+6 7 2 1 0 0
+7 8 3 2 0 1
+8 10 2 1 0 0
+9 11 2 1 0 0
+10 13 3 2 0 0
+11 14 2 1 0 0
+12 16 2 1 0 0

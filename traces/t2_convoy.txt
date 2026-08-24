@@ -1,0 +1,10 @@
+
+# t2_convoy.txt - 6 processes
+# Purpose: One long burst first, short jobs behind it. Exposes FCFS convoy effect. Hand-verified.
+# Format: pid arrival burst priority nice queue
+1 0 12 2 0 0
+2 1 3 1 0 0
+3 2 2 3 0 1
+4 3 4 0 0 0
+5 4 1 2 0 0
+6 5 2 1 0 2

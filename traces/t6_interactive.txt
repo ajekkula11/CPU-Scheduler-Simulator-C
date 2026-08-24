@@ -1,0 +1,19 @@
+
+# t6_interactive.txt - 15 processes
+# Purpose: Many very short bursts + a few long ones. Exposes response-time differences; shows MLFQ and CFS at their best.
+# Format: pid arrival burst priority nice queue
+1 0 2 1 0 0
+2 0 12 4 2 2
+3 1 1 0 -1 0
+4 2 2 1 0 0
+5 3 15 5 3 2
+6 4 1 0 -2 0
+7 5 2 2 0 1
+8 6 1 0 0 0
+9 8 3 1 1 0
+10 9 2 0 -1 0
+11 10 14 4 2 2
+12 11 1 0 0 0
+13 12 2 1 0 0
+14 14 1 0 -2 0
+15 15 3 2 1 1
