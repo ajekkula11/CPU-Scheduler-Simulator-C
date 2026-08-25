@@ -64,4 +64,7 @@ typedef struct scheduler {
    "mlfq", "cfs"). Returns NULL if the name is not recognised. */
 scheduler_t *scheduler_lookup(const char *name);
 
+/* Walk the registry for usage messages. Returns NULL past the end. */
+const char *scheduler_names(int index);
+
 #endif /* SCHED_H */
