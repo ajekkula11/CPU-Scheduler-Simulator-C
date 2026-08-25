@@ -13,6 +13,7 @@ extern scheduler_t priority_p_scheduler;
 extern scheduler_t priority_np_scheduler;
 extern scheduler_t rr_scheduler;
 extern scheduler_t mlq_scheduler;
+extern scheduler_t mlfq_scheduler;
 static scheduler_t *registry[] = {
     &fcfs_scheduler,
     &sjf_scheduler,
@@ -21,6 +22,7 @@ static scheduler_t *registry[] = {
     &priority_np_scheduler,
     &rr_scheduler,
     &mlq_scheduler,
+    &mlfq_scheduler,
     NULL
 };
 
