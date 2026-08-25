@@ -8,10 +8,11 @@
    row to the table below. Nothing in main.c or the engine changes. */
 extern scheduler_t fcfs_scheduler;
 extern scheduler_t sjf_scheduler;
-
+extern scheduler_t priority_np_scheduler;
 static scheduler_t *registry[] = {
     &fcfs_scheduler,
     &sjf_scheduler,
+    &priority_np_scheduler,
     NULL
 };
 
