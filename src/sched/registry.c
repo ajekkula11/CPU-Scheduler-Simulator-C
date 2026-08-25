@@ -7,9 +7,11 @@
    algorithm means writing the file, declaring it here, and adding one
    row to the table below. Nothing in main.c or the engine changes. */
 extern scheduler_t fcfs_scheduler;
+extern scheduler_t sjf_scheduler;
 
 static scheduler_t *registry[] = {
     &fcfs_scheduler,
+    &sjf_scheduler,
     NULL
 };
 
