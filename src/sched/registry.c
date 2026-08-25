@@ -9,12 +9,16 @@
 extern scheduler_t fcfs_scheduler;
 extern scheduler_t sjf_scheduler;
 extern scheduler_t srtf_scheduler;
+extern scheduler_t priority_p_scheduler;
 extern scheduler_t priority_np_scheduler;
+extern scheduler_t rr_scheduler;
 static scheduler_t *registry[] = {
     &fcfs_scheduler,
     &sjf_scheduler,
-    &priority_np_scheduler,
     &srtf_scheduler,
+    &priority_p_scheduler,
+    &priority_np_scheduler,
+    &rr_scheduler,
     NULL
 };
 
