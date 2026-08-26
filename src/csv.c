@@ -153,3 +153,35 @@ int csv_write_run(const char *dir, const char *algo, const char *trace_token,
 
     return 0;
 }
+
+int csv_write_sweep(const char *dir, const char *trace_token,
+                    const int *quanta, const metrics_t *rows, int count)
+{
+    char path[PATH_MAX_LEN];
+    FILE *f;
+    int i;
+
+    snprintf(path, sizeof(path), "%s/sweep__%s.csv", dir, trace_token);
+
+    f = fopen(path, "w");
+    if (f == NULL) {
+        fprintf(stderr, "cannot write %s\n", path);
+        return -1;
+    }
+
+    fputs(SUMMARY_HEADER, f);
+    for (i = 0; i < count; i++) {
+        const metrics_t *m = &rows[i];
+
+        fprintf(f, "rr,%s,%d,%d,%d,%d,%d,"
+                   "%.6f,%.6f,%.6f,%.6f,%.6f,%d,%d,%.6f\n",
+                trace_token, quanta[i],
+                m->n_processes, m->total_ticks, m->busy_ticks, m->idle_ticks,
+                m->avg_turnaround, m->avg_waiting, m->avg_response,
+                m->throughput, m->cpu_utilisation,
+                m->context_switches, m->max_waiting, m->stddev_waiting);
+    }
+
+    fclose(f);
+    return 0;
+}

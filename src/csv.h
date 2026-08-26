@@ -21,5 +21,10 @@ void csv_trace_token(const char *path, char *out, size_t size);
 int csv_write_run(const char *dir, const char *algo, const char *trace_token,
                   int quantum, const process_t *procs, int n,
                   const run_result_t *r, const metrics_t *m);
+/* Write the quantum sweep file for one trace: the same columns as a
+   summary, one row per quantum, ordered ascending. Returns 0 on success,
+   -1 after printing to stderr. */
+int csv_write_sweep(const char *dir, const char *trace_token,
+                    const int *quanta, const metrics_t *rows, int count);
 
 #endif /* CSV_H */
