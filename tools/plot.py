@@ -175,17 +175,17 @@ def plot_sweep(outdir, path_in):
     rows = read_csv(path_in)
     trace = rows[0]["trace"]
     q = [int(r["quantum"]) for r in rows]
-    wait = [float(r["avg_waiting"]) for r in rows]
+    resp = [float(r["avg_response"]) for r in rows]
     sw = [int(r["context_switches"]) for r in rows]
 
     fig, ax1 = plt.subplots(figsize=(9, 5))
     ax2 = ax1.twinx()
 
-    ax1.plot(q, wait, marker="o", color="#4c72b0", label="avg waiting")
+    ax1.plot(q, resp, marker="o", color="#4c72b0", label="avg response")
     ax2.plot(q, sw, marker="s", color="#c44e52", label="context switches")
 
     ax1.set_xlabel("quantum")
-    ax1.set_ylabel("average waiting (ticks)", color="#4c72b0")
+    ax1.set_ylabel("average response (ticks)", color="#4c72b0")
     ax2.set_ylabel("context switches", color="#c44e52")
     ax1.set_xticks(q)
     ax1.grid(alpha=0.3)
